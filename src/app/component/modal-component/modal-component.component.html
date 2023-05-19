@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Comprobantes Fiscales</h2>
+<mat-dialog-content>
+  <div class="montosContainer">
+    <p class="montoTitle">Monto Total:</p><p class="monto">{{montoTotal}} </p>
+    <p class="montoTitle">Itbis18 Total:</p><p class="monto">{{itbisTotal}} </p>
+  </div>
+  <div>
+    <table class="my-table">
+      <thead>
+        <tr>
+          <th>Rnc Cedula</th>
+          <th>NCF</th>
+          <th>Nomto</th>
+          <th>ITBIS18</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of Comprobantesfiscales" >
+          <td>{{item.rncCedula}}</td>
+          <td>{{item.ncf}}</td>
+          <td>{{item.monto}}</td>
+          <td>{{item.itbis18}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+<div class="footer">
+  <button mat-button color="primary" (click)="Cerrar()">Cerrar</button>
+</div>
+  
+</mat-dialog-actions>

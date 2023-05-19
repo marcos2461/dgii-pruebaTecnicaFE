@@ -1,0 +1,28 @@
+<h2>Comprobantes Fiscales</h2>
+
+<div>
+  <input type="text" matInput class="inputBuscar" [(ngModel)]="numeroIdentificacion" placeholder="Ingrese rncCedula">
+  <button mat-stroked-button (click)="getComprobanteFiscalByContribuyente()">Buscar</button>
+</div>
+
+<div>
+  <table class="my-table">
+    <thead>
+      <tr>
+        <th>Rnc Cedula</th>
+        <th>NCF</th>
+        <th>Nomto</th>
+        <th>ITBIS18</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Comprobantesfiscales" >
+        <td>{{item.rncCedula}}</td>
+        <td>{{item.ncf}}</td>
+        <td>{{item.monto}}</td>
+        <td>{{item.itbis18}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
